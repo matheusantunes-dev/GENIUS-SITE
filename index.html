@@ -1,24 +1,57 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Genius Game</title>
+    <title>Genius Pro</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div id="game-container">
-        <div id="score">Score: <span id="score-value">0</span></div>
-        <div id="round">Round: <span id="round-value">1</span></div>
-        <div id="buttons-container">
-            <div class="button" id="green" onclick="handleButtonClick('green')"></div>
-            <div class="button" id="red" onclick="handleButtonClick('red')"></div>
-            <div class="button" id="yellow" onclick="handleButtonClick('yellow')"></div>
-            <div class="button" id="blue" onclick="handleButtonClick('blue')"></div>
-        </div>
-        <button id="start-button" onclick="startGame()">Start Game</button>
-        <button id="restart-button" onclick="restartGame()">Restart Game</button>
-    </div>
+    <main class="app">
+        <header class="topbar">
+            <div>
+                <h1>Genius Pro</h1>
+                <p>Repita a sequência e sobreviva o máximo possível.</p>
+            </div>
+            <div class="stats">
+                <div class="stat-card">
+                    <span>Rodada</span>
+                    <strong id="round-value">0</strong>
+                </div>
+                <div class="stat-card">
+                    <span>Pontuação</span>
+                    <strong id="score-value">0</strong>
+                </div>
+                <div class="stat-card">
+                    <span>Recorde</span>
+                    <strong id="best-score-value">0</strong>
+                </div>
+            </div>
+        </header>
+
+        <section class="board-wrap">
+            <div id="buttons-container" class="board">
+                <button class="game-button" id="green" data-color="green" aria-label="verde"></button>
+                <button class="game-button" id="red" data-color="red" aria-label="vermelho"></button>
+                <button class="game-button" id="yellow" data-color="yellow" aria-label="amarelo"></button>
+                <button class="game-button" id="blue" data-color="blue" aria-label="azul"></button>
+                <button class="game-button" id="orange" data-color="orange" aria-label="laranja"></button>
+                <button class="game-button" id="purple" data-color="purple" aria-label="roxo"></button>
+            </div>
+
+            <div class="controls">
+                <button id="start-button">Iniciar</button>
+                <button id="restart-button">Reiniciar</button>
+                <label class="speed-control" for="speed-range">
+                    Velocidade
+                    <input id="speed-range" type="range" min="450" max="1100" value="750" step="50">
+                </label>
+            </div>
+
+            <p id="message">Clique em <strong>Iniciar</strong> para começar.</p>
+        </section>
+    </main>
+
     <script src="script.js"></script>
 </body>
 </html>
