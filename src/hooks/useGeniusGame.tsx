@@ -143,7 +143,7 @@ export const getSpeedDescriptor = (speed: number) => {
   if (speed <= 950) {
     return 'Agil'; // Antes era Constante
   }
-  return 'Turbo'; // Antes era Calmo
+  return 'Rápido'; // Antes era Calmo
 };
 
 
