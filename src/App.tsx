@@ -137,7 +137,7 @@ export default function App() {
             </section>
 
             <section className="guide-card">
-              <p className="section-label">Mapa rapido</p>
+              <p className="section-label">Mapa Rápido</p>
               <ul className="legend-list">
                 {pads.map((pad) => (
                   <li key={pad.id}>
