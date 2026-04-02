@@ -135,19 +135,17 @@ const createInitialState = (): GameState => ({
 
 export const getSpeedDescriptor = (speed: number) => {
   if (speed <= 550) {
-    return 'Turbo';
+    return 'Calmo'; // Antes era Turbo
   }
-
   if (speed <= 750) {
-    return 'Agil';
+    return 'Constante'; // Antes era Agil
   }
-
   if (speed <= 950) {
-    return 'Constante';
+    return 'Agil'; // Antes era Constante
   }
-
-  return 'Calmo';
+  return 'Turbo'; // Antes era Calmo
 };
+
 
 export function useGeniusGame() {
   const [state, setState] = useState<GameState>(() => createInitialState());
