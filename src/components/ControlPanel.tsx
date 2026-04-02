@@ -54,7 +54,7 @@ export default function ControlPanel({
 
         <div className="speed-panel__scale" aria-hidden="true">
           <span>Calmo</span>
-          <span>Rapido</span>
+          <span>Rápido</span>
         </div>
       </div>
 
